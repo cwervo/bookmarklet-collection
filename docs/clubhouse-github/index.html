@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      html,body,div { margin: 0; padding: 0; font: normal 16px/24px Helvetica Neue, Helvetica, sans-serif; color: #333; }
+      #main { max-width: 630px; margin: 3em auto; }
+      .bookmarklet { display: inline-block; padding: .5em 1em; color: #fff; background: #50dcf3; border-radius: 4px; text-decoration: none; }
+      a { color: #50dcf3; }
+      .dim { color: #999; }
+    </style>
+  </head>
+  <body>
+    <div id="main">
+      <h1>Bookmarklet</h1>
+      <p>
+        Drag this button to your bookmarks bar to save it as a bookmarklet:
+      </p>
+      <p>
+        <a class="bookmarklet" href="javascript:(function()%7B%22use%20strict%22%3Bvar%20clipEl%3Ddocument.querySelector(%22%5Bid%5E%3Dstory-id%5D%22)%3BclipEl.value%3D%22%5Bch%22%2BclipEl.id.match(%2F%5Cd%2B%2F)%5B0%5D%2B%22%5D(%22%2Bdocument.location.href%2B%22)%22%3B%7D)()">Get Clubhouse GH string</a>
+      </p>
+      <p class="dim">This page was created with the <a href="https://github.com/mrcoles/bookmarklet">bookmarklet</a> npm library.</p>
+    </div>
+  </body>
+</html>
+

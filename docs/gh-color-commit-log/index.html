@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      html,body,div { margin: 0; padding: 0; font: normal 16px/24px Helvetica Neue, Helvetica, sans-serif; color: #333; }
+      #main { max-width: 630px; margin: 3em auto; }
+      .bookmarklet { display: inline-block; padding: .5em 1em; color: #fff; background: #50dcf3; border-radius: 4px; text-decoration: none; }
+      a { color: #50dcf3; }
+      .dim { color: #999; }
+    </style>
+  </head>
+  <body>
+    <div id="main">
+      <h1>Bookmarklet</h1>
+      <p>
+        Drag this button to your bookmarks bar to save it as a bookmarklet:
+      </p>
+      <p>
+        <a class="bookmarklet" href="javascript:(function()%7B%22use%20strict%22%3Bfunction%20_toConsumableArray(e)%7Bif(Array.isArray(e))%7Bfor(var%20r%3D0%2Co%3DArray(e.length)%3Br%3Ce.length%3Br%2B%2B)o%5Br%5D%3De%5Br%5D%3Breturn%20o%7Dreturn%20Array.from(e)%7Dvar%20contribGraph%3Ddocument.querySelector(%22.mb-5.border.border-gray-dark.rounded-1.py-2%22)%3B%22github.com%22!%3D%3Dwindow.location.host%3Falert(%22Seems%20lik%20you're%20on%20%22%2Bwindow.location.host%2B%22%2C%20not%20GitHub.com%20%E2%80%94%20you%20need%20to%20be%20on%20a%20GitHub%20user's%20page%20for%20this%20bookmarklet%20to%20work%20properly.%22)%3AcontribGraph%7C%7Calert(%22Couldn't%20find%20the%20GitHub%20contribution%20calendar%2C%20you%20need%20to%20be%20on%20a%20GitHub%20user's%20page%20for%20this%20bookmarklet%20to%20work%20properly.%22)%3Bvar%20colors%3D%5B%22%23FF0000%22%2C%22%2300FF00%22%2C%22%230000FF%22%2C%22%232EAFAC%22%2C%22%23DAD%22%2C%22%23BAE%22%2C%22%23BEE%22%2C%22%23eee%22%2C%22%23c6e48b%22%2C%22%237bc96f%22%2C%22%23239a3b%22%2C%22%23196127%22%5D%2Ccalendar%3Ddocument.querySelector(%22.js-calendar-graph-svg%22)%2CcurrentColor%3Dcolors%5B0%5D%2CclearBtn%3Ddocument.createElement(%22button%22)%3Bfunction%20clearPixels()%7B%5B%5D.concat(_toConsumableArray(columns)).filter(function(e)%7Breturn%22g%22%3D%3D%3De.tagName%7D).forEach(function(e)%7B%5B%5D.concat(_toConsumableArray(e.children)).forEach(function(e)%7Be.setAttribute(%22fill%22%2C%22%23EEE%22)%7D)%7D)%7DclearBtn.innerHTML%3D'Clear%20%22Pixels%22'%2CclearBtn.style%3D%22position%3A%20relative%3B%20display%3A%20inline-block%3B%20margin%3A%201%25%200%3B%20padding%3A%206px%2012px%3B%20font-size%3A%20%24body-font-size%3B%20font-weight%3A%20%24font-weight-bold%3B%20line-height%3A%2020px%3B%20white-space%3A%20nowrap%3B%20vertical-align%3A%20middle%3B%20cursor%3A%20pointer%3B%20user-select%3A%20none%3B%20background-repeat%3A%20repeat-x%3B%20background-position%3A%20-1px%20-1px%3B%20background-size%3A%20110%25%20110%25%3B%20border%3A%201px%20solid%20transparentize(%24black%2C%200.8)%3B%20border-radius%3A%200.25em%3B%20appearance%3A%20none%3B%22%2CclearBtn.addEventListener(%22click%22%2CclearPixels)%2CcontribGraph.parentNode.insertBefore(clearBtn%2CcontribGraph)%3Bvar%20legend%3Ddocument.createElement(%22ul%22)%3Blegend.classList%2B%3D%22legend%22%2Ccolors.forEach(function(r)%7Bvar%20e%3Ddocument.createElement(%22li%22)%3Be.setAttribute(%22data-color%22%2Cr)%2Ce.style%3D%22display%3A%20inline-block%3B%20width%3A%2020px%3B%20height%3A%2020px%3B%20margin%3A%200%202px%3B%20background-color%3A%20%22%2Br%2B%22%3B%20border%3A%203px%20solid%20white%3B%20border-radius%3A%2050%25%3B%22%2CcurrentColor%3D%3D%3Dr%26%26(e.style%5B%22border-color%22%5D%3D%22black%22)%2Ce.addEventListener(%22click%22%2Cfunction()%7Bif(currentColor!%3D%3Dr)%7Bvar%20e%3Ddocument.querySelector(%22li%5Bdata-color%3D'%22%2BcurrentColor%2B%22'%5D%22)%3Be.style%5B%22border-color%22%5D%3D%22white%22%2CcurrentColor%3Dr%2C(e%3Ddocument.querySelector(%22li%5Bdata-color%3D'%22%2Br%2B%22'%5D%22)).style%5B%22border-color%22%5D%3D%22black%22%7D%7D)%2Clegend.appendChild(e)%7D)%2CcontribGraph.parentNode.insertBefore(legend%2CcontribGraph)%3Bvar%20columns%3Dcalendar.children%5B0%5D.children%3B%5B%5D.concat(_toConsumableArray(columns)).filter(function(e)%7Breturn%22g%22%3D%3D%3De.tagName%7D).forEach(function(e)%7Be.addEventListener(%22click%22%2Cfunction(e)%7Bcolors.indexOf(e.target.getAttribute(%22fill%22))%3Bconsole.log(%22currentColor%3A%22%2CcurrentColor)%2Ce.target.setAttribute(%22fill%22%2CcurrentColor)%7D)%7D)%3B%7D)()">Bookmarklet</a>
+      </p>
+      
+      <p class="dim">This page was created with the <a href="https://github.com/mrcoles/bookmarklet">bookmarklet</a> npm library.</p>
+    </div>
+  </body>
+</html>
