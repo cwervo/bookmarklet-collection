@@ -29,5 +29,7 @@ bookmarklet script.js out.js
 To compile the bookmarklet docs:
 
 ```
-bookmarklet source.js -d > ../docs/clubhouse-github/index.html
+bookmarklet source.js -d > ../docs/${PWD##*/}/index.html
+# note, if that fails you may need to run:
+mkdir ../docs/${PWD##*/}
 ```
